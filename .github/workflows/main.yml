@@ -18,8 +18,7 @@ jobs:
   
     - name: Install dependencies
       run: |
-        npm install newman
-        npm install -g newman-reporter-html
+        npm install -g newman newman-reporter-htmlextra
 
     - name: Test
       env:
@@ -47,7 +46,7 @@ jobs:
         # Required sender full name (address can be skipped):
         from: <${{secrets.DIMAGIQA_MAIL_USERNAME}}>
         # Optional HTML body read from file:
-        html_body: file:////home/runner/work/postman-test/Result/report.html
+        html_body: file:////home/runner/work/postman-test/report.html
         # Optional priority: 'high', 'normal' (default) or 'low'
         priority: normal
 
